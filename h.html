@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EazyPayouts Dashboard</title>
+    <link rel="stylesheet" href="c.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <img src="1.png_.png" alt="EazyPayouts Logo" />
+            </div>
+            <ul class="menu">
+                <li class="active">Loads</li>
+                <li>Statements</li>
+                <li>Transactions</li>
+            </ul>
+            <div class="logout">Logout</div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <div class="dropdowns">
+                    <select id="companySelect">
+                        <option value="">Select Company</option>
+                        <option value="A">Test yantra </option>
+                        <option value="B">Tech pyramyd </option>
+                    </select>
+
+                    <select id="accountSelect">
+                        <option value="1">Select Account</option>
+                        <option value="1">Account 1</option>
+                        <option value="2">Account 2</option>
+                    </select>
+                </div>
+            </header>
+
+            <section class="balance-section">
+                <div class="balance-box">
+                    <img src="2-.png" alt="EazyPayouts Logo" />
+                    <p class="balance-amount" id="balanceAmount">₹ 0</p>
+                </div>
+            </section>
+
+            <section class="loads-section">
+                <h4>Latest Loads are displayed here</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Credit</th>
+                            <th>A/c Balance</th>
+                            <th>UTR/RRN</th>
+                            <th>A/c No / UPI</th>
+                        </tr>
+                    </thead>
+                    <tbody id="loadsTableBody"></tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer Buttons for mobile -->
+    <div class="footer-buttons">
+        <button class="sign-up-btn">Sign up</button>
+        <button class="log-in-btn">Log in</button>
+    </div>
+
+    <script src="j.js"></script>
+</body>
+</html>

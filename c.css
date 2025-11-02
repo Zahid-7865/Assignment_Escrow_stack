@@ -1,0 +1,280 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    background-color: #222;
+    color: #333;
+}
+
+/* Container holds Sidebar and Main */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #fff;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo img {
+    width: 200px;
+    height: 130px;
+    margin-right: 10px;
+}
+.balance-box img {
+    width: 200px;
+    height: 130px;
+    margin-right: 10px;
+}
+.menu {
+    list-style: none;
+    flex-grow: 1;
+}
+
+.menu li {
+    padding: 12px 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #555;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu li.active,
+.menu li:hover {
+    background-color: #0b2e7c;
+    color: white;
+}
+
+.logout {
+    font-size: 14px;
+    color: #777;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+}
+
+/* Main Content Styling */
+.main-content {
+    flex-grow: 1;
+    background-color: #fff;
+    padding: 25px 40px;
+    overflow-y: auto;
+}
+
+/* Header Dropdowns */
+header {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    border-color: #0b2e7c;
+}
+
+/* Balance Box Styling */
+.balance-section {
+    margin-bottom: 40px;
+}
+
+.balance-box {
+    border: 1px solid #eee;
+    padding: 20px 30px;
+    border-radius: 6px;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background-color: #fafafa;
+    min-width: 280px;
+    text-align: center;
+}
+
+/* Balance icon and text container */
+.balance-icon-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+/* Rupee icon container */
+.balance-icon {
+    width: 60px;
+    height: 50px;
+}
+
+/* SVG styles inside the icon container */
+.balance-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Available Balance text below the icon */
+.balance-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    user-select: none;
+}
+
+/* Balance amount formatting */
+.balance-amount {
+    font-size: 21px;
+    font-weight: 700;
+    color: #0B2E7C; /* Blue color */
+    margin-top: 5px;
+    user-select: none;
+}
+
+/* Loads section */
+.loads-section h4 {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+thead tr {
+    background-color: #f9f9f9;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+    color: #555;
+}
+
+.green {
+    color: #279e45;
+    font-weight: 600;
+}
+
+/* Footer buttons for Sign up and Log in */
+.footer-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+    /* Hidden on desktops */
+    display: none;
+}
+
+.sign-up-btn {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.log-in-btn {
+    background-color: white;
+    color: #333;
+    border: 1px solid #aaa;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Responsive Styles */
+
+/* Hide sidebar and show footer buttons on small screens */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    .sidebar {
+        display: none;
+    }
+    .main-content {
+        padding: 20px 15px 120px;
+        /* Increased bottom padding for footer buttons */
+    }
+    .footer-buttons {
+        display: flex;
+    }
+    header {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    select {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 12px;
+    }
+    .balance-box {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto 30px;
+        padding: 20px;
+    }
+    table {
+        font-size: 12px;
+    }
+    th, td {
+        padding: 8px 10px;
+    }
+}
+
+/* Medium screens - slightly smaller sidebar */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .sidebar {
+        width: 180px;
+    }
+    .main-content {
+        margin-left: 180px;
+        padding: 20px 30px;
+    }
+}
