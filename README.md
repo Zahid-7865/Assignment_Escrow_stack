@@ -2,6 +2,11 @@
 
 This project is a front-end **Escrow Dashboard** interface named **EazyPayouts**, built using **HTML, CSS, and JavaScript**. It allows users to view company accounts, select accounts dynamically, and visualize recent transaction loads and balances in an intuitive dashboard layout.
 
+# Run The project by the Fallowing steps :
+please Click the fallowing link : https://zahid-7865.github.io/Assignment_Escrow_stack/
+click to the 
+Company name then it shoes the account-1,then change Account-2
+
 ---
 
 ## 🚀 Features
@@ -80,7 +85,10 @@ Copy code
 
 ## 📸 Preview
 
-*(Add screenshots of your dashboard here if available)*
+<img width="1895" height="875" alt="image" src="https://github.com/user-attachments/assets/e34de03f-3e49-46d3-b8cf-ff6d30319c51" />
+
+<img width="1893" height="861" alt="image" src="https://github.com/user-attachments/assets/fb9b9852-3930-44dc-b3df-f28bf4b98a05" />
+
 
 ---
 
